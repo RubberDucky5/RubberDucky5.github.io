@@ -1,10 +1,8 @@
 let emoji;
 
 fetch("data/emoji.json")
-.then(response => {
-   emoji = response.json();
-   emoji = JSON.parse(emoji);
-});
+.then(response => response.json()
+.then(data => emoji = data));
 
 let ea = emoji.emoji;
 let emojiButtonList = [];
