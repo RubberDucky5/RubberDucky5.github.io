@@ -1,8 +1,11 @@
-let emoji = {};
+let emoji = {
+  emoji: ["❤️","👍","😎","💥","⭐","🔥","✔️","❗","❌","🚀","🌈"]
+};
 
-fetch("data/emoji.json")
-.then(response => response.json()
-.then(data => emoji = data));
+//Promises meake me cry
+// fetch("data/emoji.json")
+// .then(response => response.json()
+// .then(data => emoji = data));
 
 let emojiList = emoji.emoji;
 let emojiButtonList = [];
