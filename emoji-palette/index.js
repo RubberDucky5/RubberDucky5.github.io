@@ -1,3 +1,5 @@
+let emoji;
+
 fetch("data/emoji.json")
 .then(response => {
    emoji = response.json();
