@@ -1,0 +1,28 @@
+/*
+Color Reference:
+bg: #11111a
+lighter than bg: #1d1d25
+lighter than that: #282830
+lil brighter: #383847
+almost white: #e2e2e9
+white: #ffffff
+theme color: #9bf2cc
+*/
+
+.button {
+    border: #444453;
+    fill: white;
+    border-radius: 6px;
+    background-color: #282830;
+    color: white;
+    padding: 10px 10px;
+    text-align: center;
+    display: inline-block;
+    transition-duration: 0.5s;
+    font-size: 8vw;
+}
+
+.normal-text {
+  font-familly: Tahoma, sans-serif;
+  color: white;
+}
