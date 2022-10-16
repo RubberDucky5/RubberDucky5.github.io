@@ -1,0 +1,3 @@
+[submodule "shadery"]
+	path = shadery
+	url = https://github.com/RubberDucky5/shadery.git
