@@ -1,0 +1,17 @@
+{
+    "name": "VTracker",
+    "short_name": "VTracker",
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff",
+    "display": "standalone",
+    "scope": "/",
+    "start_url": "/",
+    "description": "A template web app to use as a jumping off point",
+    "orientation": "portrait",
+    "icons": [
+        {
+            "src": "/resource/avatar1024.png",
+            "sizes": "1024x1024"
+        }
+    ]
+}

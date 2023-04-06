@@ -1,0 +1,34 @@
+* {
+    padding: 1px;
+    margin:  0;
+}
+
+body {
+    /* overflow: hidden; */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.small {
+    color: #686868;
+}
+
+.climbs__climb {
+    padding-bottom: 2px;
+    border-bottom: 1px solid #eee;
+}
+
+.climbs__add {
+    text-align: center;
+    padding-bottom: 2px;
+    color: #ddd;
+    border: 1px solid #eee;
+    /* height: 100px; */
+    user-select: none;
+}
+
+.climbs__empty {
+    text-align: center;
+    padding-bottom: 2px;
+    color: #c8c8c8;
+    user-select: none;
+}
