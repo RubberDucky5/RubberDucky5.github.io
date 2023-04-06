@@ -2,7 +2,10 @@ import *  as CLIMB from "./climbManager.js";
 
 function registerServiceWorker () {
     if (!('serviceWorker' in navigator)) return;
-    navigator.serviceWorker.register('sw.js');
+    navigator.serviceWorker.register('sw.js', {
+        scope: '/VTracker/',
+    });
+    
 }
 registerServiceWorker();
 
