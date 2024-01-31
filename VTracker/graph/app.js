@@ -14,11 +14,15 @@ if (/iPhone|Android/i.test(navigator.userAgent)) {
 
 function reload() {
     let root = $("#root");
-    
 
-    // Declare the chart dimensions and margins.
-    const width = 640;
-    const height = 400;
+    makeGraph("", root);
+}
+window.addEventListener('load', reload);
+
+
+function makeGraph(data, root) {
+    const width = root.offsetWidth;
+    const height = root.offsetHeight;
     const marginTop = 20;
     const marginRight = 20;
     const marginBottom = 30;
@@ -52,7 +56,7 @@ function reload() {
     // Append the SVG element.
     root.append(svg.node());
 }
-window.addEventListener('load', reload);
+
 
 // function buildClimbs (data) {
 //     let root = $("#climbs");
