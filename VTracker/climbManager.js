@@ -40,7 +40,7 @@ class StorageInterface {
         return JSON.parse(window.localStorage.getItem(this.LOCAL_KEY));
     }
     static printData () {
-        alert(this.getClimbs());
+        alert(window.localStorage.getItem(this.LOCAL_KEY));
     }
     static clearData () {
         window.localStorage.setItem(this.LOCAL_KEY, JSON.stringify({climbs:[]}));

@@ -37,6 +37,7 @@ function buildClimbs (data) {
         </div>`);
     
     $("#addbutton").addEventListener("click", () => {
+        CLIMB.StorageInterface.printData();
         document.location.href = './graph';
     });
 
