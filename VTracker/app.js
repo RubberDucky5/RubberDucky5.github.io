@@ -37,7 +37,7 @@ function buildClimbs (data) {
         </div>`);
     
     $("#addbutton").addEventListener("click", () => {
-        document.location.href = './add';
+        document.location.href = './graph';
     });
 
     if(data == []) {

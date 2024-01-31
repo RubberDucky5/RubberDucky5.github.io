@@ -15,12 +15,14 @@ if (/iPhone|Android/i.test(navigator.userAgent)) {
 function reload() {
     let root = $("#root");
 
-    makeGraph("", root);
+    let data = CLIMB.StorageInterface.getClimbs().climbs;
+
+    makeGraph(data, CLIMB.Grades.V_Scale, root);
 }
 window.addEventListener('load', reload);
 
 
-function makeGraph(data, root) {
+function makeGraph(data, grade, root) {
     // Declare the chart dimensions and margins.
     const width = root.offsetWidth;
     const height = 500;
@@ -29,9 +31,21 @@ function makeGraph(data, root) {
     const marginBottom = 30;
     const marginLeft = 40;
 
+    let minDate = Number.MAX_SAFE_INTEGER
+    let maxDate = 0;
+
+    for(let c of data) {
+        if(c.date < minDate) {
+            minDate = c.date;
+        }
+        if(c.date > maxDate) {
+            maxDate = c.date;
+        }
+    }
+
     // Declare the x (horizontal position) scale.
     const x = d3.scaleUtc()
-        .domain([new Date("2023-01-01"), new Date("2024-01-01")])
+        .domain([new Date(minDate), new Date(maxDate)])
         .range([marginLeft, width - marginRight]);
 
     // Declare the y (vertical position) scale.
