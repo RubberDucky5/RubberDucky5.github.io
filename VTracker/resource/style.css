@@ -19,7 +19,8 @@ body {
 
 .climbs__add {
     text-align: center;
-    padding-bottom: 2px;
+    padding: 20px;
+    padding-bottom: 20px;
     color: #ddd;
     border: 1px solid #eee;
     /* height: 100px; */
