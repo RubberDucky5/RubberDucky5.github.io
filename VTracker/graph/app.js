@@ -24,7 +24,6 @@ function makeGraph(data, root) {
     // Declare the chart dimensions and margins.
     const width = root.offsetWidth;
     const height = root.offsetHeight;
-    console.log(height)
     const marginTop = 20;
     const marginRight = 20;
     const marginBottom = 30;
