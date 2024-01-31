@@ -2,10 +2,7 @@ import *  as CLIMB from "./climbManager.js";
 
 function registerServiceWorker () {
     if (!('serviceWorker' in navigator)) return;
-    navigator.serviceWorker.register('sw.js', {
-        scope: '/VTracker/',
-    });
-    
+    navigator.serviceWorker.register('sw.js');
 }
 registerServiceWorker();
 
@@ -23,7 +20,7 @@ function reload () {
     let climbdata = CLIMB.StorageInterface.getClimbs().climbs;
 
     climbdata.sort((a, b) => {
-            return new Date(a.date).getTime() - new Date(b.date).getTime();
+            return new Date(b.date).getTime() - new Date(a.date).getTime();
     });
 
     buildClimbs(climbdata);

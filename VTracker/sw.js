@@ -1,8 +1,8 @@
 let assets = [
-    "./",
-    "./index.html",
-    "./app.js",
-    "./resource/style.css",
+    "/",
+    "/index.html",
+    "/app.js",
+    "/resource/style.css",
 ]
 
 self.addEventListener("install", installEvent => {
