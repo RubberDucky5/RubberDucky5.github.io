@@ -31,6 +31,10 @@ class StorageInterface {
 
         window.localStorage.setItem(this.LOCAL_KEY, JSON.stringify(state));
     }
+
+    static setData (data) {
+        window.localStorage.setItem(this.LOCAL_KEY, JSON.stringify(data));
+    }
     
     static getClimbs () {
         if (window.localStorage.getItem(this.LOCAL_KEY) == null) {
