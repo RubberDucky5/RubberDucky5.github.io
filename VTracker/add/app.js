@@ -1,4 +1,4 @@
-import *  as CLIMB from "/climbManager.js";
+import *  as CLIMB from "../climbManager.js";
 
 function registerServiceWorker () {
     if (!('serviceWorker' in navigator)) return;
