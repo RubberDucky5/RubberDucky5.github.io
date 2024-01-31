@@ -60,7 +60,7 @@ function buildClimbs (data) {
         <div id="${c.uuid}" class="climbs__climb">
             <h2>${c.grade}</h2>
             <p class="small">${
-                c.type + " | " + (c.name == "" ?  "" : c.name + " | ") + new Intl.DateTimeFormat('default', {month: '2-digit', day: '2-digit'}).format(new Date(c.date))
+                c.type + " | " + (c.name == "" ?  "" : c.name + " | ") + new Intl.DateTimeFormat('default', {month: '2-digit', day: '2-digit', year: '2-digit'}).format(new Date(c.date))
             }</p>
         </div>`);
     }
