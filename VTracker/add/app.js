@@ -20,7 +20,7 @@ function reload () {
 
     // alert(JSON.stringify(CLIMB));
 
-    append(root, `<p>Grade System:</p>`);
+    append(root, `<p class="add__header">Grade System:</p>`);
     let gradeSys = `<select id="gradesys">`;
     for(let g of Object.keys(CLIMB.Grades)) {
         gradeSys+= `<option>${g.replace(/_/gu, " ")}</option>`;
@@ -28,7 +28,7 @@ function reload () {
     gradeSys+=`</select>`;
     append(root, gradeSys);
 
-    append(root,  `<p>Grade:</p>`);
+    append(root,  `<p class="add__header">Grade:</p>`);
     append(root, `<select id="grade"></select>`);
     let gradeSystemElement = document.getElementById("gradesys");
     let gradesElement = document.getElementById("grade");
@@ -45,7 +45,7 @@ function reload () {
 
     updateGrades();
 
-    append(root, `<p>Type:</p>`);
+    append(root, `<p class="add__header">Type:</p>`);
     let climbType = `<select id="climbtype">`;
     for(let g of CLIMB.Types) {
         climbType += `<option>${g}</option>`;
@@ -56,7 +56,7 @@ function reload () {
     let climbTypeElement = $("#climbtype");
 
     append(root, `<br>`);
-    append(root, `<button id="btn_addition">Add!</button>`);
+    append(root, `<button class="add__button" id="btn_addition">Add!</button>`);
 
     $("#btn_addition").addEventListener("click", () => {
         CLIMB.StorageInterface.addClimb(new CLIMB.ClimbData(climbTypeElement.value, gradesElement.value, gradeSystemElement.value));

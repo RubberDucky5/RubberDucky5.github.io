@@ -33,7 +33,7 @@ function buildClimbs (data) {
 
     append(root, `
         <div id="addbutton" class="climbs__add">
-            <h2>+</h2>
+            <img class="icon" src="./resource/icons/plus.svg">
         </div>`);
     
     $("#addbutton").addEventListener("click", () => {
