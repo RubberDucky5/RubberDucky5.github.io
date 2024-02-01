@@ -24,7 +24,7 @@ body {
     max-height: 200px; /* Max height to limit scaling */
     border-radius: 50%; /* Ensures it's a circle */
     background-color: #3498db; /* Adjust background color */
-    position: absolute;
+    position: fixed;
     bottom: 20px; /* Adjust as needed */
     right: 20px; /* Adjust as needed */
     display: flex;
