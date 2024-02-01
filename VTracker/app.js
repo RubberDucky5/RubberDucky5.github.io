@@ -38,7 +38,7 @@ function buildClimbs (data) {
     
     $("#addbutton").addEventListener("click", () => {
         CLIMB.StorageInterface.copyData();
-        document.location.href = './add';
+        // document.location.href = './add';
     });
 
     if(data == []) {

@@ -44,7 +44,7 @@ class StorageInterface {
         return JSON.parse(window.localStorage.getItem(this.LOCAL_KEY));
     }
     static copyData () {
-        navigator.clipboard.writeText(window.localStorage.getItem(this.LOCAL_KEY));
+        document.body.innerHTML = window.localStorage.getItem(this.LOCAL_KEY);
     }
     static clearData () {
         window.localStorage.setItem(this.LOCAL_KEY, JSON.stringify({climbs:[]}));
