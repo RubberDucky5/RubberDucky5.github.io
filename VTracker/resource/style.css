@@ -18,11 +18,20 @@ body {
 }
 
 .climbs__add {
-    text-align: center;
-    padding: 20px;
-    padding-bottom: 20px;
-    color: #ddd;
-    border: 1px solid #eee;
+    width: 20vmin; /* 20vmin ensures it's 20% of the smaller dimension */
+    height: 20vmin; /* Same as width to maintain a perfect circle */
+    max-width: 200px; /* Max width to limit scaling */
+    max-height: 200px; /* Max height to limit scaling */
+    border-radius: 50%; /* Ensures it's a circle */
+    background-color: #3498db; /* Adjust background color */
+    position: absolute;
+    bottom: 20px; /* Adjust as needed */
+    right: 20px; /* Adjust as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10vmin; /* Adjust the font size as needed */
+    color: white; /* Adjust the color as needed */
     /* height: 100px; */
     user-select: none;
 }
