@@ -1,4 +1,4 @@
-import *  as CLIMB from "./climbManager.js";
+import * as CLIMB from "./climbManager.js";
 
 function registerServiceWorker () {
     if (!('serviceWorker' in navigator)) return;
@@ -37,7 +37,7 @@ function buildClimbs (data) {
         </div>`);
     
     $("#addbutton").addEventListener("click", () => {
-        // CLIMB.StorageInterface.printData();
+        CLIMB.StorageInterface.printData();
         document.location.href = './add';
     });
 
