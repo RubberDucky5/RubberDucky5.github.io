@@ -17,12 +17,12 @@ function reload() {
 
     let data = CLIMB.StorageInterface.getClimbs().climbs;
 
-    makeGraph(data, CLIMB.Grades.V_Scale, root);
+    makeGraph(data, CLIMB.Grades.Modified_YDS, "#3498db", root);
 }
 window.addEventListener('load', reload);
 
 
-function makeGraph(data, grade, root) {
+function makeGraph(data, scale, color, root) {
     // Declare the chart dimensions and margins.
     const width = root.offsetWidth;
     const height = 500;
@@ -49,8 +49,8 @@ function makeGraph(data, grade, root) {
         .range([marginLeft, width - marginRight]);
 
     // Declare the y (vertical position) scale.
-    const y = d3.scaleLinear()
-        .domain([0, 100])
+    const y = d3.scalePoint()
+        .domain(scale)
         .range([height - marginBottom, marginTop]);
 
     // Create the SVG container.
@@ -67,6 +67,16 @@ function makeGraph(data, grade, root) {
     svg.append("g")
         .attr("transform", `translate(${marginLeft},0)`)
         .call(d3.axisLeft(y));
+
+    svg.append('g')
+        .selectAll("dot")
+        .data(data)
+        .enter()
+        .append("circle")
+          .attr("cx", function (d) { return x(d.date); } )
+          .attr("cy", function (d) { return y(d.grade); } )
+          .attr("r", 5)
+          .style("fill", color );
 
     // Append the SVG element.
     root.append(svg.node());
